@@ -1,0 +1,1 @@
+to use this app, run the frontend and the backend open open the frontend in localhost
