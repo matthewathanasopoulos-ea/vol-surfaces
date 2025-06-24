@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import PriceChart from "./components/price_chart";
+import PriceChart from "./components/PriceChart";
 
 interface PingResponse {
   message: string;
@@ -32,7 +32,8 @@ function App(): React.JSX.Element {
   };
 
   return (
-    <>
+    <div style={{ padding: "20px" }}>
+      <h1>Matthew EA Charts</h1>
       <div style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}>
         <PriceChart asset="gold" title="Gold Price (USD/oz)" color="#FFD700" />
         <PriceChart asset="silver" title="Silver Price (USD/oz)" color="#C0C0C0" />
@@ -41,6 +42,7 @@ function App(): React.JSX.Element {
         <PriceChart asset="copper" title="Copper Price (USD/lb)" color="#B87333" />
         <PriceChart asset="aluminium" title="Aluminium Price (USD/tonne)" color="#A9A9A9" />
       </div>
+      <h1>3D Volatility Surfaces</h1>
       <div>
         <header className="App-header">
           <h1>Frontend App</h1>
@@ -62,7 +64,7 @@ function App(): React.JSX.Element {
           )}
         </header>
       </div>
-    </>
+    </div>
   );
 }
 

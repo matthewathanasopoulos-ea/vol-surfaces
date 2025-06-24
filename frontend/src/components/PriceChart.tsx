@@ -13,7 +13,7 @@ const PriceChart: React.FC<PriceChartProps> = ({
   asset,
   title,
   color = "#17BECF",
-  height = 500,
+  height = 300,
   apiBaseUrl = "http://127.0.0.1:5000",
 }) => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
