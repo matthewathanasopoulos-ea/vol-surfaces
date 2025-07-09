@@ -46,12 +46,17 @@ const MetalsPositionUpdates = () => {
         >
           Generate Report for CME Metals Position Update
         </Button>
+        <p />
         {showCMEReport && Object.keys(ctaFlowToTradeResponse).length > 0 && (
           <div>
-            <h3>CME Metals Position Update:</h3>
             <TextArea
-              rows={16}
-              style={{ width: "100%", paddingRight: "10px", fontFamily: "inherit" }}
+              rows={10}
+              style={{
+                width: "100%",
+                paddingRight: "10px",
+                paddingBottom: "10px",
+                fontFamily: "inherit",
+              }}
               defaultValue={`Gold: CTAs bought 0.2k lots, and discretionary funds sold 0.7k lots. CTAs are expected to ${ctaFlowToTradeResponse.gold}k lots over the coming week.
 
 Silver: CTAs bought 0.2k lots, and discretionary funds sold 0.7k lots. CTAs are expected to ${ctaFlowToTradeResponse.silver}k lots over the coming week.
@@ -62,6 +67,30 @@ Copper: CTAs bought 0.2k lots, and discretionary funds sold 0.7k lots. CTAs are 
 
 Palladium: CTAs bought 0.2k lots, and discretionary funds sold 0.7k lots. CTAs are expected to ${ctaFlowToTradeResponse.palladium}k lots over the coming week.`}
             />
+            <iframe
+              title="Weekly Position Changes, CME"
+              aria-label="Table"
+              id="datawrapper-chart-Ppxlt"
+              src="https://datawrapper.dwcdn.net/Ppxlt/1767/"
+              scrolling="no"
+              frameBorder="0"
+              style={{ paddingTop: "20px" }}
+              width="664"
+              height="276"
+              data-external="1"
+            ></iframe>
+            <iframe
+              title="CME metal position changes, k lots (%)"
+              aria-label="Table"
+              id="datawrapper-chart-SNBsu"
+              src="https://datawrapper.dwcdn.net/SNBsu/6252/"
+              scrolling="no"
+              frameBorder="0"
+              style={{ paddingTop: "20px" }}
+              width="771"
+              height="430"
+              data-external="1"
+            ></iframe>
           </div>
         )}
       </div>
@@ -76,11 +105,11 @@ Palladium: CTAs bought 0.2k lots, and discretionary funds sold 0.7k lots. CTAs a
         >
           Generate Report for LME Metals Position Update
         </Button>
+        <p />
         {showLMEReport && Object.keys(ctaFlowToTradeResponse).length > 0 && (
           <div>
-            <h3>LME Metals Position Update:</h3>
             <TextArea
-              rows={16}
+              rows={10}
               style={{ width: "100%", paddingRight: "10px", fontFamily: "inherit" }}
               defaultValue={`Aluminium: CTAs bought 0.2k lots, and discretionary funds sold 0.7k lots. CTAs are expected to ${ctaFlowToTradeResponse.lme_aluminium}k lots over the coming week.
 
@@ -92,6 +121,30 @@ Nickel: CTAs bought 0.2k lots, and discretionary funds sold 0.7k lots. CTAs are 
 
 Zinc: CTAs bought 0.2k lots, and discretionary funds sold 0.7k lots. CTAs are expected to ${ctaFlowToTradeResponse.lme_zinc}k lots over the coming week.`}
             />
+            <iframe
+              title="Weekly Position Changes, LME"
+              aria-label="Table"
+              id="datawrapper-chart-tKRyh"
+              src="https://datawrapper.dwcdn.net/tKRyh/1369/"
+              scrolling="no"
+              frameBorder="0"
+              style={{ paddingTop: "20px" }}
+              width="600"
+              height="276"
+              data-external="1"
+            ></iframe>
+            <iframe
+              title=""
+              aria-label="Table"
+              id="datawrapper-chart-oS3fW"
+              src="https://datawrapper.dwcdn.net/oS3fW/6244/"
+              scrolling="no"
+              frameBorder="0"
+              style={{ paddingTop: "20px" }}
+              width="750"
+              height="335"
+              data-external="1"
+            ></iframe>
           </div>
         )}
       </div>
