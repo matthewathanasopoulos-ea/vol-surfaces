@@ -60,3 +60,18 @@ continous_contracts = {
     "bitcoin": r"sid=databento\futures\continuous_contracts\diff_price_adjusted\7\BTC\Settlementprice@df:2017-01-01",
     "uka": r"sid=databento\futures\continuous_contracts\diff_price_adjusted\7\UKA\Settlementprice"
 }
+
+cta_net_flow_to_trade = {
+    "gold": r"sid=teams\ea_qa\paper_balance\gold\cta_flow_to_trade\0",
+    "silver": r"sid=teams\ea_qa\paper_balance\silver\cta_flow_to_trade\0",
+    "platinum": r"sid=teams\ea_qa\paper_balance\platinum\cta_flow_to_trade\0",
+    "palladium": r"sid=teams\ea_qa\paper_balance\palladium\cta_flow_to_trade\0",
+    "copper": r"sid=teams\ea_qa\paper_balance\copper\cta_flow_to_trade\0",
+    "aluminium": r"sid=teams\ea_qa\paper_balance\aluminium\cta_flow_to_trade\0",
+    "lme_copper": r"sid=teams\ea_qa\paper_balance\lme_copper\cta_flow_to_trade\0",
+    "lme_aluminium": r"sid=teams\ea_qa\paper_balance\lme_aluminium\cta_flow_to_trade\0",
+    "lme_zinc": r"sid=teams\ea_qa\paper_balance\lme_zinc\cta_flow_to_trade\0",
+    "lme_lead": r"sid=teams\ea_qa\paper_balance\lme_lead\cta_flow_to_trade\0",
+    "lme_nickel": r"sid=teams\ea_qa\paper_balance\lme_nickel\cta_flow_to_trade\0",
+    "lme_tin": r"sid=teams\ea_qa\paper_balance\lme_tin\cta_flow_to_trade\0"
+}

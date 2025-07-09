@@ -136,7 +136,7 @@ class ShoojuTools(object):
         msg = f"Moved {current_index + 1} out of {total_number}. \n"
         f"{round((current_index + 1) / total_number * 100, 2)} % Completed. \n"
         f"Total time elapsed: {round(end_dt - start_time, 0)}s. \n"
-        f"Expected Completion Time: "
+        "Expected Completion Time: "
         f"{datetime.fromtimestamp(start_time + ((end_dt - start_time) / ((current_index + 1) / total_number)))}"
         return msg
 
@@ -1318,7 +1318,7 @@ class ShoojuTools(object):
 
         if date_start is None:
             date_start = datetime.now() - relativedelta(years=1)
-        if type(date_start) == str:
+        if type(date_start) is str:
             date_start = datetime.strptime(date_start, "%Y-%m-%d")
         date_start = date_start.timestamp() * 1000
 
@@ -1378,7 +1378,7 @@ class ShoojuTools(object):
             >>> jobs_ids = revisions_df['id']
             >>> df = sj.get_points_from_job_ids_into_df(sid=sid, jobs_ids=jobs_ids)
         """
-        if type(jobs_ids) == int:
+        if type(jobs_ids) is int:
             jobs_ids = [jobs_ids]
 
         df_data_to_series_list = []
@@ -1572,7 +1572,7 @@ class ShoojuTools(object):
         if not job:
             job = self.register_and_check_job(job_name, batch_size=self._get_JOB_batch_size(kwargs))
 
-        self.logger.info(f"Uploading series differences to Shooju")
+        self.logger.info("Uploading series differences to Shooju")
         for sid in scroller:
             _sid_name = sid.get("series_id").lower()
             sj_ts = sid.get("points", pd.Series(dtype=float))
